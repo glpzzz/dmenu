@@ -4,17 +4,12 @@
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Noto Sans:size=7"
+	"Ubuntu Medium:size=8"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static const char *colors[SchemeLast][2] = {
-	/*               fg         bg       */
-	// [SchemeNorm] = { "#ffffff", "#300a24" },
-	[SchemeNorm] = { "#ffffff", "#000000" },
-	// [SchemeSel]  = { "#000000", "#428dd1" },
-	[SchemeSel]  = { "#ffffff", "#222222" },
-	[SchemeOut]  = { "#000000", "#00ffff" },
-};
+
+#include "/home/glpz/.cache/wal/colors-wal-dmenu.h"
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
 
