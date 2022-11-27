@@ -17,12 +17,13 @@ static char normfgcolor[] = "#bbbbbb";
 static char normbgcolor[] = "#222222";
 static char selfgcolor[]  = "#eeeeee";
 static char selbgcolor[]  = "#005577";
+static char highfgcolor[] = "#ffc978";
 static char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { normfgcolor, normbgcolor },
 	[SchemeSel]  = { selfgcolor,  selbgcolor  },
-    [SchemeSelHighlight] = { "#ffc978", "#005577" },
-    [SchemeNormHighlight] = { "#ffc978", "#222222" },
+    [SchemeSelHighlight] = { selfgcolor, selbgcolor },
+    [SchemeNormHighlight] = { highfgcolor, normbgcolor },
 	[SchemeOut]  = { "#000000",   "#00ffff" },
     [SchemeOutHighlight] = { "#ffc978", "#00ffff" },
 };
@@ -44,5 +45,6 @@ ResourcePref resources[] = {
 	{ "normbgcolor", STRING, &normbgcolor },
 	{ "selfgcolor",  STRING, &selfgcolor },
 	{ "selbgcolor",  STRING, &selbgcolor },
+    { "highfgcolor", STRING, &highfgcolor },
 	{ "prompt",      STRING, &prompt },
 };
